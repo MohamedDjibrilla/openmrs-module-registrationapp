@@ -223,10 +223,10 @@ public class RegisterPatientFragmentController {
             }
         }
 
-        if (obsGroupMap.size() > 0 ){
+        if (obsGroupMap.isEmpty() ){
             buildGroupObs(conceptService, obsToCreate, obsGroupMap);
         }
-        if (obsToCreate.size() > 0) {
+        if (obsToCreate.isEmpty()) {
             if (registrationEncounter != null) {
                 for (Obs obs : obsToCreate) {
                     registrationEncounter.addObs(obs);
