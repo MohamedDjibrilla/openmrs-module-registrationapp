@@ -311,7 +311,7 @@ public class RegisterPatientFragmentController {
                 for (ObsGroupItem obsGroupItem : obsGroupItems) {
                     buildObs(conceptService, groupObsToCreate, obsGroupItem.getObsConcept(), obsGroupItem.getObsValues());
                 }
-                if (groupObsToCreate.size() > 0) {
+                if (groupObsToCreate.isEmpty()) {
                     for (Obs obs : groupObsToCreate) {
                         groupObs.addGroupMember(obs);
                     }
